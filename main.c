@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "common_functions.h"
+#include "first_algorithm.h"
 
 int main()
 {
