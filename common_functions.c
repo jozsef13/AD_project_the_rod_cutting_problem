@@ -53,3 +53,23 @@ int maximum_value(int first_value, int second_value)
         return second_value;
     }
 }
+
+///Print the rod length and the pieces prices
+int print_rod(int rod_length, int rod_pieces_prices[])
+{
+    ///\fn void print_rod()
+    ///\brief Prints the values for the rod
+    ///\param rod_length Integer for the rod of the length
+    ///\param rod_pieces_prices Array for the prices of each piece from the rod
+    ///\var i An iterator
+    int i;
+
+    printf("The rod length generated is: %d\n", rod_length);
+    printf("\n------------------------------------------------\n\n");
+
+    for(i = 1; i <= rod_length; i++){
+        printf("The price of the %d rod is: %d\n", i, rod_pieces_prices[i]);
+    }
+    printf("\n------------------------------------------------\n");
+}
+
