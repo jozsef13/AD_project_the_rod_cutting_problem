@@ -18,18 +18,16 @@ int main()
     ///\var rod_length A variable containing the total length of the rod
     ///\var rod_pieces_prices A variable containing the prices of each pieces of the rod
     ///\var i An interator
-    int rod_length, rod_pieces_prices[100], i;
+    int rod_length, rod_pieces_prices[1000], i;
 
     read_rod_length(&rod_length);
-    printf("The rod length generated is: %d\n", rod_length);
 
     read_rod_pieces_prices(rod_pieces_prices, rod_length);
-    for(i = 1; i <= rod_length; i++){
-        printf("The price of the %d rod is: %d\n", i, rod_pieces_prices[i]);
-    }
 
-    printf("After we apply the first algorithm, we get that the maximum value obtainable is: %d \n", rod_cutting_first_algorithm(rod_pieces_prices, rod_length));
-    printf("After we apply the second algorithm, we get that the maximum value obtainable is: %d", rod_cutting_second_algorithm(rod_pieces_prices, rod_length));
+    print_rod(rod_length, rod_pieces_prices);
+
+    printf("\nAfter we apply the first algorithm, we get that the maximum value obtainable is: %d \n", rod_cutting_first_algorithm(rod_pieces_prices, rod_length));
+    printf("After we apply the second algorithm, we get that the maximum value obtainable is: %d \n", rod_cutting_second_algorithm(rod_pieces_prices, rod_length));
 
     return 0;
 }
