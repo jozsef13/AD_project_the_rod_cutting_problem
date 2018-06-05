@@ -34,7 +34,7 @@ void read_rod_pieces_prices(int rod_pieces_prices[], int rod_length)
     srand((unsigned) time(NULL));
 
     for(i = 1; i <= rod_length; i++){
-        rod_pieces_prices[i] = rand() % 100 + 1;
+        rod_pieces_prices[i] = rand() % 1000 + 1;
     }
 }
 
